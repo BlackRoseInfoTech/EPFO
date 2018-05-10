@@ -17,12 +17,13 @@ import android.widget.ProgressBar;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.google.firebase.crash.FirebaseCrash;
+
+import static com.google.firebase.crash.FirebaseCrash.log;
+import static com.google.firebase.crash.FirebaseCrash.report;
 
 public class wv_activity extends AppCompatActivity {
     //Declaring Variables
     ProgressBar progress;
-    String url_epfo;
     AdView adView;
     private WebView brow;
 
@@ -37,11 +38,11 @@ public class wv_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wv_activity);
-        FirebaseCrash.report(new Exception("EPFO:Crash Log"));
-
+        report(new Exception("EPFO:Crash Log"));
         //I'm also creating a log message, which we'll look at in more detail later//
-        FirebaseCrash.log("wv_activity started");
-
+        log("wv_activity started");
+        //logcat(Log.ERROR, TAG, "NPE caught");
+        //report(ex);
         //Function Declaring
         //listView= findViewById(R.id.listView);
         progress = findViewById(R.id.progressBar);
@@ -111,11 +112,11 @@ public class wv_activity extends AppCompatActivity {
         brow.loadUrl(url);
 
         brow.setDownloadListener(new DownloadListener() {
-            public void onDownloadStart(String url, String userAgent,
+            public void onDownloadStart(String url1, String userAgent,
                                         String contentDisposition, String mimetype,
                                         long contentLength) {
                 Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
+                i.setData(Uri.parse(url1));
                 startActivity(i);
             }
         });
@@ -164,8 +165,6 @@ public class wv_activity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
-
         Intent intent = new Intent(wv_activity.this, portal_activity.class);
         startActivity(intent);
         finish();
