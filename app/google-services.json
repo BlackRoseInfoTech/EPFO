@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "727369200655",
+    "firebase_url": "https://epfo-78acf.firebaseio.com",
+    "project_id": "epfo-78acf",
+    "storage_bucket": "epfo-78acf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727369200655:android:c2a9d5092641a79f",
+        "android_client_info": {
+          "package_name": "com.devannexe.epfo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "727369200655-q6o5ad6ktnlf7nfsu22ho0r7lu3n7g0n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devannexe.epfo",
+            "certificate_hash": "2e821126e46a156c0c558001248499ed50bb9ae8"
+          }
+        },
+        {
+          "client_id": "727369200655-qeu8j15cn4olnd92qd23s2dqd8c7mcft.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devannexe.epfo",
+            "certificate_hash": "6051b1929daa316179fd26d53eec3c83e985f209"
+          }
+        },
+        {
+          "client_id": "727369200655-qm00isc30ekgmfi4e7hm0dmalmqvo4c7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsM0obRGw3HM5T2cSB019Ug7ReYoI9Xxo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "727369200655-qm00isc30ekgmfi4e7hm0dmalmqvo4c7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
