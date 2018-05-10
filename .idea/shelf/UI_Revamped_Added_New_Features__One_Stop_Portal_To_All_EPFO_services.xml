@@ -1,0 +1,64 @@
+<changelist name="UI_Revamped_Added_New_Features__One_Stop_Portal_To_All_EPFO_services" date="1525938362146" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/UI_Revamped_Added_New_Features__One_Stop_Portal_To_All_EPFO_services/shelved.patch" />
+  <option name="DESCRIPTION" value="UI Revamped Added New Features. One Stop Portal To All EPFO services" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/back_pic_1024_1.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/UI_Revamped_Added_New_Features__One_Stop_Portal_To_All_EPFO_services/back_pic_1024_1.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/epfo_logo.gif" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/UI_Revamped_Added_New_Features__One_Stop_Portal_To_All_EPFO_services/epfo_logo.gif" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-hdpi/ic_launcher.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/UI_Revamped_Added_New_Features__One_Stop_Portal_To_All_EPFO_services/ic_launcher.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-hdpi/ic_launcher_round.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/UI_Revamped_Added_New_Features__One_Stop_Portal_To_All_EPFO_services/ic_launcher_round.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-mdpi/ic_launcher.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/UI_Revamped_Added_New_Features__One_Stop_Portal_To_All_EPFO_services/ic_launcher1.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-mdpi/ic_launcher_round.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/UI_Revamped_Added_New_Features__One_Stop_Portal_To_All_EPFO_services/ic_launcher_round1.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/UI_Revamped_Added_New_Features__One_Stop_Portal_To_All_EPFO_services/ic_launcher2.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/UI_Revamped_Added_New_Features__One_Stop_Portal_To_All_EPFO_services/ic_launcher_round2.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/UI_Revamped_Added_New_Features__One_Stop_Portal_To_All_EPFO_services/ic_launcher3.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/UI_Revamped_Added_New_Features__One_Stop_Portal_To_All_EPFO_services/ic_launcher_round3.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/UI_Revamped_Added_New_Features__One_Stop_Portal_To_All_EPFO_services/ic_launcher4.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/UI_Revamped_Added_New_Features__One_Stop_Portal_To_All_EPFO_services/ic_launcher_round4.png" />
+  </binary>
+</changelist>
