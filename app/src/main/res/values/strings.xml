@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">EPFO PORTAL</string>
+    <string name="app_name_">EPFO ALL IN ONE PORTAL</string>
+    <string name="admob_app_id">ca-app-pub-2730015181382084~6918127416</string>
+    <string name="admob_app_id_test">ca-app-pub-3940256099942544</string>
+    <string name="banner_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_test">ca-app-pub-3940256099942544/1033173712</string>
+
+
+    <string name="interstitial">ca-app-pub-2730015181382084/3434479299</string>
+
+
+    <!--<string name="banner">ca-app-pub-2730015181382084/3717249008</string>
+    <string name="banner_2">ca-app-pub-2730015181382084/5630618983</string>-->
+
+
+    <string name="a_epfo_passbook">https://passbook.epfindia.gov.in/MemberPassBook/Login.jsp</string>
+    <string name="b_epfo_uan">https://unifiedportal-mem.epfindia.gov.in/memberinterface/</string>
+    <string name="c_epfo_unified_portal">https://unifiedportal-emp.epfindia.gov.in/epfo/</string>
+    <string name="d_epfo_ecr_return_payment">https://unifiedportal-emp.epfindia.gov.in/epfo/</string>
+    <string name="e_epfo_kyc_update">https://unifiedportal-mem.epfindia.gov.in/memberinterface/</string>
+    <string name="f_epfo_ekyc_portal">https://iwu.epfindia.gov.in/eKYC/</string>
+    <string name="g_epfo_uan_aadhar_allotment">https://unifiedportal-mem.epfindia.gov.in/memberinterface/no-auth/citizenRegistration/viewRegistraton</string>
+    <string name="h_epfo_shram_suvidha_common_esr_epfo_esic">https://registration.shramsuvidha.gov.in/user/login</string>
+    <string name="i_epfo_establishment_registration">https://registration.shramsuvidha.gov.in/user/login</string>
+    <string name="j_epfo_uan_activation">https://unifiedportal-mem.epfindia.gov.in/memberinterface/</string>
+    <string name="k_epfo_uan_status">https://unifiedportal-mem.epfindia.gov.in/memberinterface/</string>
+    <string name="l_epfo_online_claims_member_account_transfer">https://unifiedportal-mem.epfindia.gov.in/memberinterface/</string>
+
+
+    <string name="item1">EPFO PASSBOOK</string>
+    <string name="item2">EPFO UAN</string>
+    <string name="item3">EPFO UNIFIED PORTAL</string>
+    <string name="item4">ECR/RETURNS/PAYMENT</string>
+    <string name="item5">EPFO KYC UPDATE</string>
+    <string name="item6">EPFO EKYC PORTAL</string>
+    <string name="item7">DIRECT UAN ALLOTMENT USING AADHAR</string>
+    <string name="item8">SHRAM SUVIDHA COMMON ECR (EPFO/ESIC)</string>
+    <string name="item9">ESTABLISHMENT REGISTRATION</string>
+    <string name="item10">EPFO UAN ACTIVATION</string>
+    <string name="item11">EPFO UAN STATUS</string>
+    <string name="item12">ONLINE CLAIMS MEMBER ACCOUNT TRANSFER</string>
+
+</resources>
