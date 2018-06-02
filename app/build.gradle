@@ -3,12 +3,13 @@ apply plugin: 'com.android.application'
 android {
     //flavorDimensions "version"
     compileSdkVersion 27
+    def vcode = (int)(((new Date().getTime()/1000) - 1451606400) / 10)
     defaultConfig {
         applicationId "com.devannexe.epfo"
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 24
-        versionName "DEVANNEXE EPFO PORTAL 2.4"
+        versionCode vcode
+        versionName "DEVANNEXE EPFO PORTAL 2.4."+vcode
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
