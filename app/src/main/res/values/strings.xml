@@ -1,19 +1,29 @@
 <resources>
     <string name="app_name">EPFO PORTAL</string>
     <string name="app_name_">EPFO ALL IN ONE PORTAL</string>
-    <string name="admob_app_id">ca-app-pub-2730015181382084~6918127416</string>
-    <string name="admob_app_id_test">ca-app-pub-3940256099942544</string>
-    <string name="banner_test">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="interstitial_test">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="portal_activity_background"></string>
+
+    <!--BackGround-->
 
 
-    <string name="interstitial">ca-app-pub-2730015181382084/3434479299</string>
 
+    <!--ADMOB VARIABLES-->
+    <string name="admob_app_id1">ca-app-pub-3940256099942544</string><!--test-->
+    <string name="admob_app_id2">ca-app-pub-2485607748962892~9437356220</string>
+    <string name="banner1">ca-app-pub-3940256099942544/6300978111</string><!--test-->
+    <string name="banner2">ca-app-pub-2485607748962892/9839421726</string>
+    <string name="banner3">ca-app-pub-3940256099942544/6300978111</string><!--test-->
+     <string name="banner4">ca-app-pub-2485607748962892/1143933233</string>
+    <string name="int1">ca-app-pub-3940256099942544/1033173712</string><!--test-->
+    <string name="int2">ca-app-pub-2485607748962892/1306325587</string>
 
-    <!--<string name="banner">ca-app-pub-2730015181382084/3717249008</string>
-    <string name="banner_2">ca-app-pub-2730015181382084/5630618983</string>-->
+    <!--IMPLEMENTATION-->
+    <string name="admob_app_id">@string/admob_app_id2</string>
+    <string name="interstitial_test">@string/int2</string>
+    <string name="banner">@string/banner2</string>
+    <string name="banner_2">@string/banner4</string>
 
-
+    <!--WEBSITES-->
     <string name="a_epfo_passbook">https://passbook.epfindia.gov.in/MemberPassBook/Login.jsp</string>
     <string name="b_epfo_uan">https://unifiedportal-mem.epfindia.gov.in/memberinterface/</string>
     <string name="c_epfo_unified_portal">https://unifiedportal-emp.epfindia.gov.in/epfo/</string>
@@ -27,7 +37,7 @@
     <string name="k_epfo_uan_status">https://unifiedportal-mem.epfindia.gov.in/memberinterface/</string>
     <string name="l_epfo_online_claims_member_account_transfer">https://unifiedportal-mem.epfindia.gov.in/memberinterface/</string>
 
-
+    <!--BOTTON NAMES-->
     <string name="item1">EPFO PASSBOOK</string>
     <string name="item2">EPFO UAN</string>
     <string name="item3">EPFO UNIFIED PORTAL</string>

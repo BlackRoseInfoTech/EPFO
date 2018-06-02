@@ -31,6 +31,7 @@ public class portal_activity extends AppCompatActivity {
         MobileAds.initialize(this,
                 getString(R.string.admob_app_id));
         adview2 = findViewById(R.id.adView2);
+        //adview2.setAdUnitId(getString(R.string.banner_test));
         AdRequest adreq = new AdRequest.Builder().build();
         adview2.loadAd(adreq);
         Bundle bundle = new Bundle();

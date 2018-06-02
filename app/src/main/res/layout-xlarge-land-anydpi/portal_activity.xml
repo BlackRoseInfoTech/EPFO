@@ -310,7 +310,7 @@
         android:layout_gravity="bottom"
         android:foregroundGravity="bottom"
         ads:adSize="SMART_BANNER"
-        ads:adUnitId="ca-app-pub-2730015181382084/5630618983"
+        ads:adUnitId="@string/banner"
         ads:layout_constraintEnd_toEndOf="parent"
         ads:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />

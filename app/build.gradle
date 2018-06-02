@@ -7,8 +7,8 @@ android {
         applicationId "com.devannexe.epfo"
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 10
-        versionName "DEVANNEXE EPFO PORTAL 1.9"
+        versionCode 24
+        versionName "DEVANNEXE EPFO PORTAL 2.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
