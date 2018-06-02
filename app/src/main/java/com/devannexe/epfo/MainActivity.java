@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                MainActivity.this.run();
+                MainActivity.this.add();
+                MainActivity.this.app();
             }
         }, SPLASH_TIME_OUT);
 
@@ -36,13 +37,18 @@ public class MainActivity extends AppCompatActivity {
         String appLinkAction = appLinkIntent.getAction();
         Uri appLinkData = appLinkIntent.getData();
     }
+    public void app(){
+        Intent homeIntent = new Intent(MainActivity.this, portal_activity.class);
+        startActivity(homeIntent);
+        finish();
+    }
 
     public void requestNewInterstitial() {
         AdRequest adRequest = new AdRequest.Builder().build();
         mInterstitialAd.loadAd(adRequest);
     }
 
-    public void run() {
+    public void add() {
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.setAdListener(new AdListener() {
                 public void onAdLoaded() {
@@ -53,16 +59,17 @@ public class MainActivity extends AppCompatActivity {
                 public void onAdFailedToLoad(int errorCode) {
                     // Code to be executed when an ad request fails.
                     mInterstitialAd.loadAd(new AdRequest.Builder().build());
-                    onAdLoaded();
-                    //onAdClosed();
+//                    onAdLoaded();
+
+                    onAdClosed();
                 }
 
-                @Override
-                public void onAdClosed() {
-                    Intent homeIntent = new Intent(MainActivity.this, portal_activity.class);
-                    startActivity(homeIntent);
-                    finish();
-                }
+//                @Override
+//                public void onAdClosed() {
+//                    Intent homeIntent = new Intent(MainActivity.this, portal_activity.class);
+//                    startActivity(homeIntent);
+//                    finish();
+//                }
             });
         } else {
             // onAdClosed();

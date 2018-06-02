@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">EPFO PORTAL</string>
     <string name="app_name_">EPFO ALL IN ONE PORTAL</string>
-    <string name="portal_activity_background"></string>
 
     <!--BackGround-->
 
@@ -17,11 +16,17 @@
     <string name="int1">ca-app-pub-3940256099942544/1033173712</string><!--test-->
     <string name="int2">ca-app-pub-2485607748962892/1306325587</string>
 
-    <!--IMPLEMENTATION-->
-    <string name="admob_app_id">@string/admob_app_id2</string>
-    <string name="interstitial_test">@string/int2</string>
-    <string name="banner">@string/banner2</string>
-    <string name="banner_2">@string/banner4</string>
+    <!--ADVERTISEMENT Testing-->
+    <string name="admob_app_id">@string/admob_app_id1</string>
+    <string name="interstitial_test">@string/int1</string>
+    <string name="banner">@string/banner1</string>
+    <string name="banner_2">@string/banner3</string>
+
+    <!--ADVERTISEMENT IMPLEMENTATION-->
+    <!--<string name="admob_app_id">@string/admob_app_id2</string>-->
+    <!--<string name="interstitial_test">@string/int2</string>-->
+    <!--<string name="banner">@string/banner2</string>-->
+    <!--<string name="banner_2">@string/banner4</string>-->
 
     <!--WEBSITES-->
     <string name="a_epfo_passbook">https://passbook.epfindia.gov.in/MemberPassBook/Login.jsp</string>

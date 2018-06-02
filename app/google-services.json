@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "727369200655-d9esort0a26e2mestpc33vo1kscekcbl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devannexe.epfo",
+            "certificate_hash": "c9c376bd8871b754805c5ee67606689b978f869c"
+          }
+        },
+        {
           "client_id": "727369200655-q6o5ad6ktnlf7nfsu22ho0r7lu3n7g0n.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -29,6 +37,10 @@
             "package_name": "com.devannexe.epfo",
             "certificate_hash": "6051b1929daa316179fd26d53eec3c83e985f209"
           }
+        },
+        {
+          "client_id": "727369200655-qm00isc30ekgmfi4e7hm0dmalmqvo4c7.apps.googleusercontent.com",
+          "client_type": 3
         },
         {
           "client_id": "727369200655-qm00isc30ekgmfi4e7hm0dmalmqvo4c7.apps.googleusercontent.com",
