@@ -1,18 +1,23 @@
 package com.devannexe.epfo;
 
 import android.annotation.SuppressLint;
+import android.app.DownloadManager;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.webkit.CookieManager;
 import android.webkit.DownloadListener;
+import android.webkit.URLUtil;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -104,22 +109,39 @@ public class wv_activity extends AppCompatActivity {
         webSettings.getAllowUniversalAccessFromFileURLs();
         webSettings.setAllowUniversalAccessFromFileURLs(true);
         webSettings.setAllowFileAccess(true);
+        webSettings.getJavaScriptCanOpenWindowsAutomatically();
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
+        webSettings.getDatabaseEnabled();
+        webSettings.getCacheMode();
 
 
         String url = getIntent().getStringExtra("url");
+        brow.clearCache(true);
+        brow.clearFormData();
         //brow.setWebViewClient(new WebViewClient());
         //webSettings.setJavaScriptEnabled(true);
         brow.loadUrl(url);
 
         brow.setDownloadListener(new DownloadListener() {
-            public void onDownloadStart(String url1, String userAgent,
-                                        String contentDisposition, String mimetype,
-                                        long contentLength) {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url1));
-                startActivity(i);
+            @Override
+            public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimeType,long contentLength) {
+                DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+                request.setMimeType(mimeType);
+                String cookies = CookieManager.getInstance().getCookie(url);
+                request.addRequestHeader("cookie", cookies);
+                request.addRequestHeader("User-Agent", userAgent);
+                request.setDescription("Downloading file...");
+                request.setTitle(URLUtil.guessFileName(url, contentDisposition, mimeType));
+                request.allowScanningByMediaScanner();
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                request.setDestinationInExternalFilesDir(wv_activity.this, Environment.DIRECTORY_DOWNLOADS, ".pdf");
+                DownloadManager dm = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
+                dm.enqueue(request);
+                Toast.makeText(getApplicationContext(), "Downloading File", Toast.LENGTH_LONG).show();
             }
         });
+
 
         /*url_epfo = getString(R.string.a_epfo_passbook);
         brow.loadUrl(url_epfo);*/

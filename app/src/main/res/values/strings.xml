@@ -4,21 +4,23 @@
 
     <!--BackGround-->
 
-    <!--ADVERTISEMENT Testing-->
+    ADVERTISEMENT Testing
     <string name="admob_app_id">ca-app-pub-3940256099942544</string>
     <string name="banner">ca-app-pub-3940256099942544/6300978111</string>
     <string name="banner1">ca-app-pub-3940256099942544/6300978111</string>
-    <!--<string name="banner2">@string/banner</string>-->
-    <!--<string name="banner3">@string/banner</string>-->
+    <string name="banner2">ca-app-pub-3940256099942544/6300978111</string>
     <string name="interstitial_test">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!--<string name="banner3">ca-app-pub-3940256099942544/6300978111</string>-->
 
     <!--ADVERTISEMENT IMPLEMENTATION-->
     <!--<string name="admob_app_id">ca-app-pub-2485607748962892~9437356220</string>-->
     <!--<string name="banner">ca-app-pub-2485607748962892/9839421726</string>-->
     <!--<string name="banner1">ca-app-pub-2485607748962892/1143933233</string>-->
     <!--<string name="banner2">ca-app-pub-2485607748962892/1403131142</string>-->
-    <!--<string name="banner3">ca-app-pub-2485607748962892/7864597717</string>-->
     <!--<string name="interstitial_test">ca-app-pub-2485607748962892/1306325587</string>-->
+
+    <!--<string name="banner3">ca-app-pub-2485607748962892/7864597717</string>-->
 
     <!--WEBSITES-->
     <string name="a_epfo_passbook">https://passbook.epfindia.gov.in/MemberPassBook/Login.jsp</string>

@@ -41,10 +41,11 @@
 
         <Button
             android:id="@+id/share"
-            android:layout_width="71dp"
-            android:layout_height="match_parent"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:background="@android:drawable/ic_menu_share" />
+            android:background="@android:drawable/ic_menu_share"
+            android:onClick="onClick" />
 
     </RelativeLayout>
 
@@ -108,6 +109,17 @@
                 app:layout_constraintStart_toStartOf="@+id/item1"
                 tools:text="@string/item2" />
 
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="bottom"
+                android:foregroundGravity="bottom"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner1"
+                app:layout_constraintStart_toStartOf="@+id/item2" />
+
             <Button
                 android:id="@+id/item3"
                 android:layout_width="match_parent"
@@ -126,7 +138,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
                 android:typeface="sans"
-                app:layout_constraintStart_toStartOf="@+id/item2"
+                app:layout_constraintStart_toStartOf="@+id/adView1"
                 tools:text="@string/item3" />
 
             <Button
@@ -149,19 +161,6 @@
                 android:typeface="sans"
                 app:layout_constraintStart_toStartOf="@+id/item3"
                 tools:text="@string/item4" />
-
-            <com.google.android.gms.ads.AdView
-                android:id="@+id/adView1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="12dp"
-                android:foregroundGravity="bottom"
-                ads:adSize="BANNER"
-                ads:adUnitId="@string/banner1"
-                app:layout_constraintStart_toStartOf="@+id/item4" />
 
             <Button
                 android:id="@+id/item5"
@@ -268,16 +267,6 @@
                 app:layout_constraintStart_toStartOf="@+id/item8"
                 tools:text="@string/item9" />
 
-            <!--<com.google.android.gms.ads.AdView-->
-                <!--android:id="@+id/adView2"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="bottom"-->
-                <!--android:foregroundGravity="bottom"-->
-                <!--ads:adSize="SMART_BANNER"-->
-                <!--ads:adUnitId="@string/banner1"-->
-                <!--app:layout_constraintStart_toStartOf="@+id/item9" />-->
-
             <Button
                 android:id="@+id/item10"
                 android:layout_width="match_parent"
@@ -299,6 +288,17 @@
                 app:layout_constraintStart_toStartOf="@+id/item9"
                 tools:text="@string/item10" />
 
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="bottom"
+                android:foregroundGravity="bottom"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner2"
+                app:layout_constraintStart_toStartOf="@+id/item10" />
+
             <Button
                 android:id="@+id/item11"
                 android:layout_width="match_parent"
@@ -317,7 +317,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
                 android:typeface="sans"
-                app:layout_constraintStart_toStartOf="@+id/item10"
+                app:layout_constraintStart_toStartOf="@+id/adView2"
                 tools:text="@string/item11" />
 
             <Button

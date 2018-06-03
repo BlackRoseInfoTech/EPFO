@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -19,7 +20,7 @@ import com.google.firebase.crash.FirebaseCrash;
 public class portal_activity extends AppCompatActivity {
 
     Button a, b, c, d, e, f, g, h, i, j, k, l, s;
-    AdView adview1;
+    AdView adview1, adview2;
     private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
@@ -33,9 +34,12 @@ public class portal_activity extends AppCompatActivity {
         MobileAds.initialize(this,
                 getString(R.string.admob_app_id));
         adview1 = findViewById(R.id.adView1);
-        //adview2.setAdUnitId(getString(R.string.banner_test));
-        AdRequest adreq = new AdRequest.Builder().build();
-        adview1.loadAd(adreq);
+        adview2 = findViewById(R.id.adView2);
+
+        AdRequest adreq1 = new AdRequest.Builder().build();
+        AdRequest adreq2 = new AdRequest.Builder().build();
+        adview1.loadAd(adreq1);
+        adview2.loadAd(adreq2);
         Bundle bundle = new Bundle();
         //bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
         //bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
@@ -53,8 +57,7 @@ public class portal_activity extends AppCompatActivity {
         j = findViewById(R.id.item10);
         k = findViewById(R.id.item11);
         l = findViewById(R.id.item12);
-        //s=findViewById(R.id.share);
-
+        s = findViewById(R.id.share);
 
         //View.OnClickListener(View view){
         //  Intent browserIntent=new Intent(getApplicationContext(),wv_activity.class);
@@ -124,6 +127,9 @@ public class portal_activity extends AppCompatActivity {
                 browserIntent.putExtra("url", getString(R.string.l_epfo_online_claims_member_account_transfer));
                 startActivity(browserIntent);
                 break;
+
+//            case R.id.share:
+
 
             default:
                 break;
