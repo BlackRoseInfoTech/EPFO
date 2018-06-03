@@ -14,6 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:background="#00e61f"
+        android:max="@integer/google_play_services_version"
+        android:progress="@integer/google_play_services_version"
+        android:progressTint="@android:color/holo_orange_light"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="8dp" />
@@ -29,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/banner_2"
+        ads:adUnitId="@string/banner"
         ads:layout_constraintEnd_toEndOf="parent"
         ads:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

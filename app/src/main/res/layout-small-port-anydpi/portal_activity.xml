@@ -9,38 +9,56 @@
     android:orientation="vertical"
     tools:context=".portal_activity">
 
-    <TextView
-        android:id="@+id/epfo_portal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:id="@+id/epfo_header"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="sans-serif-condensed"
-        android:lineSpacingExtra="8sp"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="@android:color/holo_blue_bright"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        android:typeface="sans"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="8dp"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/epfo_portal"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif-condensed"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/share"
+            android:layout_width="27dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="@android:drawable/ic_menu_share" />
+
+    </RelativeLayout>
 
     <ScrollView
-        android:layout_width="395dp"
-        android:layout_height="565dp"
+        android:layout_width="0dp"
+        android:layout_height="144dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/adView"
+        ads:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/epfo_portal">
+        app:layout_constraintTop_toBottomOf="@+id/epfo_header">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,13 +80,12 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@android:color/holo_green_light"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic"
                 android:typeface="sans"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:clickable="true" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/item2"
@@ -85,7 +102,7 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@android:color/holo_green_light"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic"
                 android:typeface="sans"
                 app:layout_constraintStart_toStartOf="@+id/item1"
@@ -106,7 +123,7 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@android:color/holo_green_light"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic"
                 android:typeface="sans"
                 app:layout_constraintStart_toStartOf="@+id/item2"
@@ -127,11 +144,24 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@android:color/holo_green_light"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic"
                 android:typeface="sans"
                 app:layout_constraintStart_toStartOf="@+id/item3"
                 tools:text="@string/item4" />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="bottom"
+                android:foregroundGravity="bottom"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner1"
+                app:layout_constraintStart_toStartOf="@+id/item" />
 
             <Button
                 android:id="@+id/item5"
@@ -148,7 +178,7 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@android:color/holo_green_light"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic"
                 android:typeface="sans"
                 app:layout_constraintStart_toStartOf="@+id/item4"
@@ -169,7 +199,7 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@android:color/holo_green_light"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic"
                 android:typeface="sans"
                 app:layout_constraintStart_toStartOf="@+id/item5"
@@ -190,7 +220,7 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@android:color/holo_green_light"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic"
                 android:typeface="sans"
                 app:layout_constraintStart_toStartOf="@+id/item6"
@@ -211,7 +241,7 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@android:color/holo_green_light"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic"
                 android:typeface="sans"
                 app:layout_constraintStart_toStartOf="@+id/item7"
@@ -232,11 +262,21 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@android:color/holo_green_light"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic"
                 android:typeface="sans"
                 app:layout_constraintStart_toStartOf="@+id/item8"
                 tools:text="@string/item9" />
+
+            <!--<com.google.android.gms.ads.AdView-->
+                <!--android:id="@+id/adView2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:foregroundGravity="bottom"-->
+                <!--ads:adSize="SMART_BANNER"-->
+                <!--ads:adUnitId="@string/banner1"-->
+                <!--app:layout_constraintStart_toStartOf="@+id/item9" />-->
 
             <Button
                 android:id="@+id/item10"
@@ -253,7 +293,7 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@android:color/holo_green_light"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic"
                 android:typeface="sans"
                 app:layout_constraintStart_toStartOf="@+id/item9"
@@ -274,7 +314,7 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@android:color/holo_green_light"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic"
                 android:typeface="sans"
                 app:layout_constraintStart_toStartOf="@+id/item10"
@@ -295,37 +335,25 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@android:color/holo_green_light"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic"
                 android:typeface="sans"
                 app:layout_constraintStart_toStartOf="@+id/item11"
                 tools:text="@string/item12" />
+
+            <!--<com.google.android.gms.ads.AdView-->
+                <!--android:id="@+id/adView3"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:foregroundGravity="bottom"-->
+                <!--ads:adSize="SMART_BANNER"-->
+                <!--ads:adUnitId="@string/banner3"-->
+                <!--app:layout_constraintStart_toStartOf="@+id/item12" />-->
+
         </LinearLayout>
     </ScrollView>
 
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:foregroundGravity="bottom"
-        ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/banner"
-        ads:layout_constraintEnd_toEndOf="parent"
-        ads:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-    <!-- <com.google.android.gms.ads.AdView
-        android:id="@+id/adView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:foregroundGravity="bottom"
-        ads:adSize="SMART_BANNER"
-        ads:adUnitId="BANNER_TEST"
-        ads:layout_constraintEnd_toEndOf="parent"
-        ads:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />-->
 
 
 </android.support.constraint.ConstraintLayout>

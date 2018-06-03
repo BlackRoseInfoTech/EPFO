@@ -19,7 +19,7 @@ import com.google.firebase.crash.FirebaseCrash;
 public class portal_activity extends AppCompatActivity {
 
     Button a, b, c, d, e, f, g, h, i, j, k, l, s;
-    AdView adview2;
+    AdView adview1;
     private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
@@ -32,10 +32,10 @@ public class portal_activity extends AppCompatActivity {
         FirebaseCrash.log("Portal_Activity started");
         MobileAds.initialize(this,
                 getString(R.string.admob_app_id));
-        adview2 = findViewById(R.id.adView2);
+        adview1 = findViewById(R.id.adView1);
         //adview2.setAdUnitId(getString(R.string.banner_test));
         AdRequest adreq = new AdRequest.Builder().build();
-        adview2.loadAd(adreq);
+        adview1.loadAd(adreq);
         Bundle bundle = new Bundle();
         //bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
         //bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
