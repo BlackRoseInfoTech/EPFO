@@ -9,6 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import java.io.IOException;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -16,6 +19,9 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crash.FirebaseCrash;
+
+import static com.google.firebase.crash.FirebaseCrash.log;
+import static com.google.firebase.crash.FirebaseCrash.report;
 
 public class portal_activity extends AppCompatActivity {
 
@@ -27,10 +33,10 @@ public class portal_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.portal_activity);
-        FirebaseCrash.report(new Exception("EPFO:Crash Log"));
+        report(new Exception("EPFO:Crash Log"));
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         //I'm also creating a log message, which we'll look at in more detail later//
-        FirebaseCrash.log("Portal_Activity started");
+        log("Portal_Activity started");
         MobileAds.initialize(this,
                 getString(R.string.admob_app_id));
         adview1 = findViewById(R.id.adView1);

@@ -9,7 +9,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 27
         versionCode vcode
-        versionName "DEVANNEXE EPFO PORTAL 2.4."+vcode
+        versionName "DEVANNEXE EPFO PORTAL 2.5."+vcode
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -31,24 +31,23 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'com.google.firebase:firebase-appindexing:15.0.1'
-    implementation 'com.google.firebase:firebase-crash:15.0.2'
+    implementation 'com.google.firebase:firebase-crash:16.0.0'
     implementation 'com.google.firebase:firebase-ads:15.0.1'
-    implementation 'com.google.firebase:firebase-invites:15.0.1'
-    implementation 'com.google.firebase:firebase-firestore:16.0.0'
+    implementation 'com.google.firebase:firebase-invites:16.0.0'
+    implementation 'com.google.firebase:firebase-firestore:17.0.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.google.android.gms:play-services-ads:15.0.1'
-    implementation 'com.google.firebase:firebase-core:15.0.2'
-
+    implementation 'com.google.firebase:firebase-core:16.0.0'
     // Getting a "Could not find" error? Make sure you have
     // added the Google maven respository to your root build.gradle
-
+    implementation 'org.jsoup:jsoup:1.11.3'
 }
 
 apply plugin: 'com.google.gms.google-services'
