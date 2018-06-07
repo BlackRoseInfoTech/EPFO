@@ -36,7 +36,7 @@
     <string name="k_epfo_uan_status">https://unifiedportal-mem.epfindia.gov.in/memberinterface/</string>
     <string name="l_epfo_online_claims_member_account_transfer">https://unifiedportal-mem.epfindia.gov.in/memberinterface/</string>
 
-    <!--BOTTON NAMES-->
+    <!--BUTTON NAMES-->
     <string name="item1">EPFO PASSBOOK</string>
     <string name="item2">EPFO UAN</string>
     <string name="item3">EPFO UNIFIED PORTAL</string>
