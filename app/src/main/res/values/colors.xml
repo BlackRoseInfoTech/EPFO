@@ -3,4 +3,31 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <!--Colours-->
+    <color name="primary">#FF9800</color>
+    <color name="primary_dark">#F57C00</color>
+    <color name="primary_light">#FFE0B2</color>
+    <color name="accent">#FF5722</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#212121</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="background1">#000000</color>
+    <color name="background2">#FAFAFA</color>
+
+    <!--BUTTON COLORS-->
+    <color name="item1">#FF1744</color>
+    <color name="item2">#3D5AFE</color>
+    <color name="item3">#43A047</color>
+    <color name="item4">#FFB300</color>
+    <color name="item5">#FF5722</color>
+    <color name="item6">#CDDC39</color>
+    <color name="item7">#29B6F6</color>
+    <color name="item8">#AB47BC</color>
+
+    <!--TEXT SIZES-->
+    <dimen name="text1">30sp</dimen>
+
+    <!--SIZES-->
+    <dimen name="size1">180dp</dimen>
 </resources>
