@@ -146,6 +146,7 @@ public class wv_activity extends AppCompatActivity {
                 request.setDestinationInExternalFilesDir(wv_activity.this, Environment.DIRECTORY_DOWNLOADS, ".pdf");
                 DownloadManager dm = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
                 dm.enqueue(request);
+                Analytics.trackEvent("file downloaded");
                 Toast.makeText(getApplicationContext(), "Downloading File", Toast.LENGTH_LONG).show();
             }
         });

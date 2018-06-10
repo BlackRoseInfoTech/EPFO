@@ -77,61 +77,73 @@ public class portal_activity extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.item1:
                 browserIntent.putExtra("url", getString(R.string.a_epfo_passbook));
+                Analytics.trackEvent("button pressed: item1");
                 startActivity(browserIntent);
                 break;
 
             case R.id.item2:
                 browserIntent.putExtra("url", getString(R.string.b_epfo_uan));
+                Analytics.trackEvent("button pressed: item2");
                 startActivity(browserIntent);
                 break;
 
             case R.id.item3:
                 browserIntent.putExtra("url", getString(R.string.c_epfo_unified_portal));
+                Analytics.trackEvent("button pressed: item3");
                 startActivity(browserIntent);
                 break;
 
             case R.id.item4:
                 browserIntent.putExtra("url", getString(R.string.d_epfo_ecr_return_payment));
+                Analytics.trackEvent("button pressed: item4");
                 startActivity(browserIntent);
                 break;
 
             case R.id.item5:
                 browserIntent.putExtra("url", getString(R.string.e_epfo_kyc_update));
+                Analytics.trackEvent("button pressed: item5");
                 startActivity(browserIntent);
                 break;
 
             case R.id.item6:
                 browserIntent.putExtra("url", getString(R.string.f_epfo_ekyc_portal));
+                Analytics.trackEvent("button pressed: item6");
                 startActivity(browserIntent);
                 break;
 
             case R.id.item7:
                 browserIntent.putExtra("url", getString(R.string.g_epfo_uan_aadhar_allotment));
+                Analytics.trackEvent("button pressed: item7");
                 startActivity(browserIntent);
                 break;
 
             case R.id.item8:
                 browserIntent.putExtra("url", getString(R.string.h_epfo_shram_suvidha_common_esr_epfo_esic));
+                Analytics.trackEvent("button pressed: item8");
                 startActivity(browserIntent);
                 break;
 
             case R.id.item9:
                 browserIntent.putExtra("url", getString(R.string.i_epfo_establishment_registration));
+                Analytics.trackEvent("button pressed: item9");
                 startActivity(browserIntent);
                 break;
 
             case R.id.item10:
                 browserIntent.putExtra("url", getString(R.string.j_epfo_uan_activation));
+                Analytics.trackEvent("button pressed: item10");
                 startActivity(browserIntent);
                 break;
 
             case R.id.item11:
                 browserIntent.putExtra("url", getString(R.string.k_epfo_uan_status));
+                Analytics.trackEvent("button pressed: item11");
                 startActivity(browserIntent);
                 break;
 
             case R.id.item12:
                 browserIntent.putExtra("url", getString(R.string.l_epfo_online_claims_member_account_transfer));
+                Analytics.trackEvent("button pressed: item12");
                 startActivity(browserIntent);
                 break;
 

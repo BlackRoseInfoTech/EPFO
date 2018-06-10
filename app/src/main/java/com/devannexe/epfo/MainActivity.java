@@ -60,27 +60,34 @@ public class MainActivity extends AppCompatActivity {
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.setAdListener(new AdListener() {
                 public void onAdLoaded() {
+                    Analytics.trackEvent("int show try 1");
                     mInterstitialAd.show();
                 }
 
                 @Override
                 public void onAdFailedToLoad(int errorCode) {
                     // Code to be executed when an ad request fails.
+                    Analytics.trackEvent("int show try 1 failed");
                     mInterstitialAd.loadAd(new AdRequest.Builder().build());
+                    Analytics.trackEvent("int show try 2");
                     mInterstitialAd.show();
                 }
             });
         } else {
+            Analytics.trackEvent("int show try 2 failed");
             mInterstitialAd.loadAd(new AdRequest.Builder().build());
             mInterstitialAd.setAdListener(new AdListener() {
                 public void onAdLoaded() {
+                    Analytics.trackEvent("int show try 3");
                     mInterstitialAd.show();
                 }
 
                 @Override
                 public void onAdFailedToLoad(int errorCode) {
                     // Code to be executed when an ad request fails.
+                    Analytics.trackEvent("int show try 3 failed");
                     mInterstitialAd.loadAd(new AdRequest.Builder().build());
+                    Analytics.trackEvent("int show try 4");
                     mInterstitialAd.show();
                 }
             });
