@@ -31,7 +31,7 @@ android {
 }
 
 dependencies {
-    //Microsoft depenencies
+    //Microsoft dependencies
     def appCenterSdkVersion = '1.5.1'
     implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
@@ -40,7 +40,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.1'
     implementation 'com.google.firebase:firebase-appindexing:15.0.1'
     implementation 'com.google.firebase:firebase-crash:16.0.0'
     implementation 'com.google.firebase:firebase-ads:15.0.1'

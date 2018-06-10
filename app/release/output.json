@@ -6,8 +6,8 @@
     "apkInfo": {
       "type": "MAIN",
       "splits": [],
-      "versionCode": 7703769,
-      "versionName": "DEVANNEXE EPFO PORTAL 2.5.7703769",
+      "versionCode": 7704010,
+      "versionName": "DEVANNEXE EPFO PORTAL 2.5.7704010",
       "enabled": true,
       "outputFile": "app-release.apk",
       "fullName": "release",
