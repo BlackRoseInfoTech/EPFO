@@ -2,10 +2,13 @@
   <dictionary name="deban">
     <words>
       <w>adview</w>
+      <w>editextvalue</w>
       <w>epfo</w>
       <w>firebase</w>
       <w>respository</w>
+      <w>urledit</w>
       <w>vcode</w>
+      <w>wbset</w>
     </words>
   </dictionary>
 </component>

@@ -1,5 +1,6 @@
 package com.devannexe.epfo;
 
+import android.webkit.CookieManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -14,7 +15,13 @@ public class ourViewClient extends WebViewClient {
     @SuppressWarnings("deprecation")
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, String url) {
+        CookieManager.setAcceptFileSchemeCookies(true);
         view.loadUrl(url);
         return true;
     }
+
+    public void onPageFinished(WebView view, String url) {
+        // do your stuff here
+    }
+
 }

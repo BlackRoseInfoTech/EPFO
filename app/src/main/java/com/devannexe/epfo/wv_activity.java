@@ -196,8 +196,12 @@ public class wv_activity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(wv_activity.this, portal_activity.class);
-        startActivity(intent);
-        finish();
+        if (brow.canGoBack()) {
+            brow.goBack();
+        } else {
+            Intent intent = new Intent(wv_activity.this, portal_activity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 }
