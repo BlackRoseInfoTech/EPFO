@@ -22,10 +22,9 @@ import android.widget.Toast;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.microsoft.appcenter.AppCenter;
+import com.google.firebase.perf.FirebasePerformance;
+import com.google.firebase.perf.metrics.Trace;
 import com.microsoft.appcenter.analytics.Analytics;
-import com.microsoft.appcenter.crashes.Crashes;
-import com.microsoft.appcenter.push.Push;
 
 import static com.google.firebase.crash.FirebaseCrash.log;
 import static com.google.firebase.crash.FirebaseCrash.report;
@@ -45,10 +44,12 @@ public class wv_activity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Analytics.class, Crashes.class);
-        Push.setSenderId("{727369200655}");
-        Analytics.trackEvent("WV Activity");
-        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Push.class);
+//        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Analytics.class, Crashes.class);
+//        Push.setSenderId("{727369200655}");
+//        Analytics.trackEvent("WV Activity");
+//        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Push.class);
+        Trace mytrace3 = FirebasePerformance.getInstance().newTrace("wv_activity");
+        mytrace3.start();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wv_activity);
         report(new Exception("EPFO:Crash Log"));
@@ -191,6 +192,7 @@ public class wv_activity extends AppCompatActivity {
             imm.hideSoftInputFromWindow(urledit.getWindowToken(),0);
         } );
          */
+        mytrace3.stop();
 
     }
 
