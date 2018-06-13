@@ -14,7 +14,10 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
+import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+import com.microsoft.appcenter.push.Push;
 
 import static com.google.firebase.crash.FirebaseCrash.log;
 import static com.google.firebase.crash.FirebaseCrash.report;
@@ -27,10 +30,10 @@ public class portal_activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Analytics.class, Crashes.class);
-//        Push.setSenderId("{727369200655}");
-//        Analytics.trackEvent("Portal Activity");
-//        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Push.class);
+        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Analytics.class, Crashes.class);
+        Push.setSenderId("{727369200655}");
+        Analytics.trackEvent("Portal Activity");
+        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Push.class);
         Trace mytrace2 = FirebasePerformance.getInstance().newTrace("portal_activity");
         mytrace2.start();
         super.onCreate(savedInstanceState);
@@ -39,8 +42,7 @@ public class portal_activity extends AppCompatActivity {
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         //I'm also creating a log message, which we'll look at in more detail later//
         log("Portal_Activity started");
-        MobileAds.initialize(this,
-                getString(R.string.admob_app_id));
+        MobileAds.initialize(this, getString(R.string.admob_app_id));
         adview1 = findViewById(R.id.adView1);
         adview2 = findViewById(R.id.adView2);
 
@@ -49,8 +51,8 @@ public class portal_activity extends AppCompatActivity {
         adview1.loadAd(adreq1);
         adview2.loadAd(adreq2);
         Bundle bundle = new Bundle();
-        //bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
-        //bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "id");
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "name");
         bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image");
         mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
         a = findViewById(R.id.item1);
@@ -148,12 +150,35 @@ public class portal_activity extends AppCompatActivity {
                 break;
 
 //            case R.id.share:
-
+//                Intent intent = new AppInviteInvitation.IntentBuilder(getString(R.string.invitation_title))
+//                        .setMessage(getString(R.string.invitation_message))
+//                        .setCallToActionText(getString(R.string.invitation_cta))
+//                        .build();
+//                startActivityForResult(intent, REQUEST_INVITE);
 
             default:
                 break;
         }
     }
+
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        Log.d(TAG, "onActivityResult: requestCode=" + requestCode + ", resultCode=" + resultCode);
+//
+//        if (requestCode == REQUEST_INVITE) {
+//            if (resultCode == RESULT_OK) {
+//                // Get the invitation IDs of all sent messages
+//                String[] ids = AppInviteInvitation.getInvitationIds(resultCode, data);
+//                for (String id : ids) {
+//                    Log.d(TAG, "onActivityResult: sent invitation " + id);
+//                }
+//            } else {
+//                // Sending failed or it was canceled, show failure message to the user
+//                // ...
+//            }
+//        }
+//    }
 
     @Override
     public void onBackPressed() {

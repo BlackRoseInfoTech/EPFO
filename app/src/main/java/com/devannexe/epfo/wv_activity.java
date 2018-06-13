@@ -24,7 +24,10 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
+import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+import com.microsoft.appcenter.push.Push;
 
 import static com.google.firebase.crash.FirebaseCrash.log;
 import static com.google.firebase.crash.FirebaseCrash.report;
@@ -35,7 +38,6 @@ public class wv_activity extends AppCompatActivity {
     AdView adView;
     private WebView brow;
 
-
     //Button go;
     //SearchView urledit;
     //ListView listView;
@@ -44,10 +46,10 @@ public class wv_activity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Analytics.class, Crashes.class);
-//        Push.setSenderId("{727369200655}");
-//        Analytics.trackEvent("WV Activity");
-//        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Push.class);
+        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Analytics.class, Crashes.class);
+        Push.setSenderId("{727369200655}");
+        Analytics.trackEvent("WV Activity");
+        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Push.class);
         Trace mytrace3 = FirebasePerformance.getInstance().newTrace("wv_activity");
         mytrace3.start();
         super.onCreate(savedInstanceState);
@@ -72,13 +74,12 @@ public class wv_activity extends AppCompatActivity {
         adView.loadAd(adreq);
 
 
-       /*
-        go= findViewById(R.id.btn_search);
-        urledit= findViewById(R.id.urledit);
-        ((EditText) findViewById(R.id.urledit).findViewById( findViewById(R.id.urledit).getContext().getResources().getIdentifier("android:id/search_src_text", null, null))).setTextColor(Color.BLACK);
-        ((EditText) findViewById(R.id.urledit).findViewById( findViewById(R.id.urledit).getContext().getResources().getIdentifier("android:id/search_src_text", null, null))).setHintTextColor(Color.BLACK);
-        ((EditText) findViewById(R.id.urledit).findViewById( findViewById(R.id.urledit).getContext().getResources().getIdentifier("android:id/search_src_text", null, null))).setHintTextColor(Color.BLACK);
-       */
+//        go= findViewById(R.id.btn_search);
+//        urledit= findViewById(R.id.urledit);
+//        ((EditText) findViewById(R.id.urledit).findViewById( findViewById(R.id.urledit).getContext().getResources().getIdentifier("android:id/search_src_text", null, null))).setTextColor(Color.BLACK);
+//        ((EditText) findViewById(R.id.urledit).findViewById( findViewById(R.id.urledit).getContext().getResources().getIdentifier("android:id/search_src_text", null, null))).setHintTextColor(Color.BLACK);
+//        ((EditText) findViewById(R.id.urledit).findViewById( findViewById(R.id.urledit).getContext().getResources().getIdentifier("android:id/search_src_text", null, null))).setHintTextColor(Color.BLACK);
+
         brow.setWebViewClient(new ourViewClient());
         brow.setWebChromeClient(new WebChromeClient() {
             @Override
@@ -93,48 +94,50 @@ public class wv_activity extends AppCompatActivity {
                 }
             }
         });
-        WebSettings webSettings = brow.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setAppCacheEnabled(true);
-        webSettings.getCacheMode();
-        webSettings.getCursiveFontFamily();
-        webSettings.getDatabaseEnabled();
-        webSettings.getJavaScriptCanOpenWindowsAutomatically();
-        webSettings.getMediaPlaybackRequiresUserGesture();
-        webSettings.setGeolocationEnabled(true);
-        webSettings.supportMultipleWindows();
-        webSettings.getAllowContentAccess();
-        webSettings.getAllowFileAccessFromFileURLs();
-        webSettings.getDisplayZoomControls();
-        webSettings.getDomStorageEnabled();
-        webSettings.getFantasyFontFamily();
-        webSettings.getLoadsImagesAutomatically();
-        webSettings.setDisplayZoomControls(true);
-        webSettings.setBuiltInZoomControls(true);
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
-        webSettings.getAllowFileAccessFromFileURLs();
-        webSettings.getAllowContentAccess();
-        webSettings.getAllowUniversalAccessFromFileURLs();
-        webSettings.setAllowUniversalAccessFromFileURLs(true);
-        webSettings.setAllowFileAccess(true);
-        webSettings.getJavaScriptCanOpenWindowsAutomatically();
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
-        webSettings.getDatabaseEnabled();
-        webSettings.getCacheMode();
 
+        WebSettings wbset = brow.getSettings();
+        wbset.setJavaScriptEnabled(true);
+        wbset.setAppCacheEnabled(true);
+        wbset.getCacheMode();
+        wbset.getCursiveFontFamily();
+        wbset.getDatabaseEnabled();
+        wbset.getJavaScriptCanOpenWindowsAutomatically();
+        wbset.getMediaPlaybackRequiresUserGesture();
+        wbset.setGeolocationEnabled(true);
+        wbset.supportMultipleWindows();
+        wbset.getAllowContentAccess();
+        wbset.getAllowFileAccessFromFileURLs();
+        wbset.getDisplayZoomControls();
+        wbset.getDomStorageEnabled();
+        wbset.getFantasyFontFamily();
+        wbset.getLoadsImagesAutomatically();
+        wbset.setDisplayZoomControls(true);
+        wbset.setBuiltInZoomControls(true);
+        wbset.setJavaScriptEnabled(true);
+        wbset.setJavaScriptCanOpenWindowsAutomatically(true);
+        wbset.getAllowFileAccessFromFileURLs();
+        wbset.getAllowContentAccess();
+        wbset.getAllowUniversalAccessFromFileURLs();
+        wbset.setAllowUniversalAccessFromFileURLs(true);
+        wbset.setAllowFileAccess(true);
+        wbset.getJavaScriptCanOpenWindowsAutomatically();
+        wbset.setJavaScriptEnabled(true);
+        wbset.setJavaScriptCanOpenWindowsAutomatically(true);
+        wbset.getDatabaseEnabled();
+        wbset.getCacheMode();
+        wbset.setUserAgentString(getString(R.string.desktop_view));
+
+//        brow.clearCache(true);
+//        brow.clearFormData();
+//        brow.setWebViewClient(new WebViewClient());
+//        wbset.setJavaScriptEnabled(true);
 
         String url = getIntent().getStringExtra("url");
-        brow.clearCache(true);
-        brow.clearFormData();
-        //brow.setWebViewClient(new WebViewClient());
-        //webSettings.setJavaScriptEnabled(true);
         brow.loadUrl(url);
 
         brow.setDownloadListener(new DownloadListener() {
             @Override
-            public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimeType,long contentLength) {
+            public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimeType, long contentLength) {
                 DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
                 request.setMimeType(mimeType);
                 String cookies = CookieManager.getInstance().getCookie(url);
@@ -146,7 +149,9 @@ public class wv_activity extends AppCompatActivity {
                 request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
                 request.setDestinationInExternalFilesDir(wv_activity.this, Environment.DIRECTORY_DOWNLOADS, ".pdf");
                 DownloadManager dm = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
-                dm.enqueue(request);
+                if (dm != null) {
+                    dm.enqueue(request);
+                }
                 Analytics.trackEvent("file downloaded");
                 Toast.makeText(getApplicationContext(), "Downloading File", Toast.LENGTH_LONG).show();
             }

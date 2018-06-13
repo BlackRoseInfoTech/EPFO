@@ -3,22 +3,23 @@
     <string name="app_name_">EPFO ALL IN ONE PORTAL</string>
 
     <!--BackGround-->
+    <string name="desktop_view">String newUA= "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.4) Gecko/20100101 Firefox/4.0";</string>
 
     <!--ADVERTISEMENT Testing-->
-    <string name="admob_app_id">ca-app-pub-3940256099942544</string>
-    <string name="banner">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner1">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner2">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="interstitial_test">ca-app-pub-3940256099942544/1033173712</string>
+    <!--<string name="admob_app_id">ca-app-pub-3940256099942544</string>-->
+    <!--<string name="banner">ca-app-pub-3940256099942544/6300978111</string>-->
+    <!--<string name="banner1">ca-app-pub-3940256099942544/6300978111</string>-->
+    <!--<string name="banner2">ca-app-pub-3940256099942544/6300978111</string>-->
+    <!--<string name="interstitial_test">ca-app-pub-3940256099942544/1033173712</string>-->
 
     <!--<string name="banner3">ca-app-pub-3940256099942544/6300978111</string>-->
 
     <!--ADVERTISEMENT IMPLEMENTATION-->
-    <!--<string name="admob_app_id">ca-app-pub-2485607748962892~9437356220</string>-->
-    <!--<string name="banner">ca-app-pub-2485607748962892/9839421726</string>-->
-    <!--<string name="banner1">ca-app-pub-2485607748962892/1143933233</string>-->
-    <!--<string name="banner2">ca-app-pub-2485607748962892/1403131142</string>-->
-    <!--<string name="interstitial_test">ca-app-pub-2485607748962892/1306325587</string>-->
+    <string name="admob_app_id">ca-app-pub-2485607748962892~9437356220</string>
+    <string name="banner">ca-app-pub-2485607748962892/9839421726</string>
+    <string name="banner1">ca-app-pub-2485607748962892/1143933233</string>
+    <string name="banner2">ca-app-pub-2485607748962892/1403131142</string>
+    <string name="interstitial_test">ca-app-pub-2485607748962892/1306325587</string>
 
     <!--<string name="banner3">ca-app-pub-2485607748962892/7864597717</string>-->
 
@@ -49,5 +50,7 @@
     <string name="item10">EPFO UAN ACTIVATION</string>
     <string name="item11">EPFO UAN STATUS</string>
     <string name="item12">ONLINE CLAIMS MEMBER ACCOUNT TRANSFER</string>
+    <string name="invitation_title">Can you access EPFO services with the click of a button??</string>
+    <string name="invitation_message">If not download this app..click this link https://play.google.com/store/apps/details?id=com.devannexe.epfo</string>
 
 </resources>
