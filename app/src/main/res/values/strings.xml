@@ -3,7 +3,7 @@
     <string name="app_name_">EPFO ALL IN ONE PORTAL</string>
 
     <!--BackGround-->
-    <string name="desktop_view">String newUA= "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.4) Gecko/20100101 Firefox/4.0";</string>
+    <string name="desktop_view">String newUA= "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.4) Gecko/20100101 Firefox/4.0"</string>
 
     <!--ADVERTISEMENT Testing-->
     <!--<string name="admob_app_id">ca-app-pub-3940256099942544</string>-->
