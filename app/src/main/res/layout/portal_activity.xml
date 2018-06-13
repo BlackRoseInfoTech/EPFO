@@ -41,8 +41,8 @@
 
         <Button
             android:id="@+id/share"
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:background="@android:drawable/ic_menu_share"
             android:onClick="onClick" />
@@ -343,16 +343,15 @@
 
             <!--<com.google.android.gms.ads.AdView-->
                 <!--android:id="@+id/adView3"-->
-                <!--android:layout_width="match_parent"-->
+            <!--android:layout_width="wrap_content"-->
                 <!--android:layout_height="wrap_content"-->
                 <!--android:layout_gravity="bottom"-->
                 <!--android:foregroundGravity="bottom"-->
-                <!--ads:adSize="BANNER"-->
+            <!--ads:adSize="SMART_BANNER"-->
                 <!--ads:adUnitId="@string/banner3"-->
                 <!--app:layout_constraintStart_toStartOf="@+id/item12" />-->
 
         </LinearLayout>
     </ScrollView>
-
 
 </android.support.constraint.ConstraintLayout>

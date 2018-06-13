@@ -12,7 +12,7 @@
         android:id="@+id/progressBar"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
-        android:layout_height="15dp"
+        android:layout_height="5dp"
         android:animationResolution="@integer/google_play_services_version"
         android:background="#ffffff"
         android:backgroundTint="#3cff00"
@@ -25,13 +25,11 @@
 
     <WebView
         android:id="@+id/wv_brow"
-        android:layout_width="896dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        ads:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="4dp" />
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"

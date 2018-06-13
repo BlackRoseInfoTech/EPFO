@@ -25,8 +25,10 @@
 
     <WebView
         android:id="@+id/wv_brow"
-        android:layout_width="match_parent"
-        android:layout_height="683dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
     <com.google.android.gms.ads.AdView

@@ -16,6 +16,8 @@ public class ourViewClient extends WebViewClient {
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, String url) {
         CookieManager.setAcceptFileSchemeCookies(true);
+//        String ua="Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.4) Gecko/20100101 Firefox/4.0";
+//        WebSettings.se
         view.loadUrl(url);
         return true;
     }

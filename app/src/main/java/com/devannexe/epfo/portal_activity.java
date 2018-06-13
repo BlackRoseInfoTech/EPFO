@@ -14,10 +14,7 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
-import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
-import com.microsoft.appcenter.crashes.Crashes;
-import com.microsoft.appcenter.push.Push;
 
 import static com.google.firebase.crash.FirebaseCrash.log;
 import static com.google.firebase.crash.FirebaseCrash.report;
@@ -30,10 +27,11 @@ public class portal_activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Analytics.class, Crashes.class);
-        Push.setSenderId("{727369200655}");
-        Analytics.trackEvent("Portal Activity");
-        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Push.class);
+//        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Analytics.class, Crashes.class);
+//        Push.setSenderId("{727369200655}");
+//        Analytics.trackEvent("Portal Activity");
+//        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Push.class);
+
         Trace mytrace2 = FirebasePerformance.getInstance().newTrace("portal_activity");
         mytrace2.start();
         super.onCreate(savedInstanceState);
