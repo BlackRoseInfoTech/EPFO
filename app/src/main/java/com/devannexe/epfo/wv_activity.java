@@ -24,7 +24,10 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
+import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+import com.microsoft.appcenter.push.Push;
 
 import static com.google.firebase.crash.FirebaseCrash.log;
 import static com.google.firebase.crash.FirebaseCrash.report;
@@ -43,10 +46,10 @@ public class wv_activity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Analytics.class, Crashes.class);
-//        Push.setSenderId("{727369200655}");
-//        Analytics.trackEvent("WV Activity");
-//        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Push.class);
+        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Analytics.class, Crashes.class);
+        Push.setSenderId("{727369200655}");
+        Analytics.trackEvent("WV Activity");
+        AppCenter.start(getApplication(), "e65ff907-0496-40e2-8c49-55b86a0a26f2", Push.class);
 
         Trace mytrace3 = FirebasePerformance.getInstance().newTrace("wv_activity");
         mytrace3.start();
@@ -96,9 +99,9 @@ public class wv_activity extends AppCompatActivity {
 
         WebSettings wbset = brow.getSettings();
 
-        wbset.setUserAgentString("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.4) Gecko/20100101 Firefox/4.0");
+//        wbset.setUserAgentString("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.4) Gecko/20100101 Firefox/4.0");
         wbset.setUserAgentString(newUA);
-        wbset.setUserAgentString(getString(R.string.desktop_view));
+//        wbset.setUserAgentString(getString(R.string.desktop_view));
         wbset.getUseWideViewPort();
         wbset.getLoadWithOverviewMode();
         wbset.getUserAgentString();
