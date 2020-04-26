@@ -3,12 +3,12 @@ apply plugin: 'com.google.firebase.firebase-perf'
 
 android {
     //flavorDimensions "version"
-    compileSdkVersion 27
+    compileSdkVersion 29
     def vcode = (int)(((new Date().getTime()/1000) - 1451606400) / 10)
     defaultConfig {
         applicationId "com.devannexe.epfo"
         minSdkVersion 21
-        targetSdkVersion 27
+        targetSdkVersion 29
         versionCode vcode
         versionName "DEVANNEXE EPFO PORTAL 2.5."+vcode
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
